@@ -1,4 +1,7 @@
 <script lang="ts">
+<!-- https://www.geeksforgeeks.org/how-to-change-tabs-horizontally-on-hover-with-tailwind-css-and-javascript/?ref=header_outind -->
+<!-- <LeftMouse>https://www.geeksforgeeks.org/how-to-make-div-fill-full-height-of-parent-in-tailwind-css/ -->
+<!-- https://www.material-tailwind.com/docs/html/installation -->
 
 let stream: MediaStream | null = null;
 let videoRef;
