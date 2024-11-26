@@ -103,7 +103,7 @@ async function captureScreen() {
 			<button class="btn bg-gray-400" on:click={() => window.print() }>Print Card</button>
 
 			<video class="mt-4 rounded-sm " width="320" height="240" autoplay={true} bind:this={videoRef}></video>
-			<canvas class="mt-4 rounded-sm bg-gray-200 screen:hidden print:hidden" width="320" height="320" bind:this="{canvasRef}"></canvas>
+			<canvas class="mt-4 rounded-sm bg-gray-200 screen:hidden print:hidden" width="200" height="200" bind:this="{canvasRef}"></canvas>
 	
 		</div>
 		<div>
