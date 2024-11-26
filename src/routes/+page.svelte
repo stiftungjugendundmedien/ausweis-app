@@ -58,9 +58,9 @@ async function capturePhoto() {
 
 	//context.drawImage(videoRef, 0, 0, canvasRef.width, canvasRef.height);
 
-	const size = canvasRef.height;
-	const sourceX = (videoRef.videoWidth - size) / 2;
-	const sourceY = (videoRef.videoHeight - size) / 2;
+	const size = videoRef.height;
+	const sourceX = (videoRef.videoWidth - size);
+	const sourceY = (videoRef.videoHeight - size);
 	context.drawImage(videoRef, sourceX, sourceY, size, size, 0, 0, size, size);
 
 	//context.drawImage(videoRef, 0, 0, canvasRef.width, canvasRef.height);
