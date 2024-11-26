@@ -90,16 +90,17 @@ async function captureScreen() {
 	<div class="grid grid-cols-2 gap-4">
 		<div class="print:hidden">
 			<h1 class="text-4xl text-blue-500 my-4">WebCam</h1>
-			<button class="btn" on:click={startStream} >Start Webcam</button>
-			<button class="bg-red-500 text-white py-2 px-4 rounded-md" on:click={stopStream} >Stop Webcam</button>
-			<button class="bg-gray-400 text-black py-2 px-4 rounded-md" on:click={capturePhoto} id="captureButton">Capture Photo</button>
- 
+			<button class="btn bg-green-500" on:click={startStream} >Start Webcam</button>
+			<button class="btn bg-red-500" on:click={stopStream} >Stop Webcam</button>
+			<button class="btn bg-primary" on:click={capturePhoto} id="captureButton">Capture Photo</button>
+			<button class="btn bg-gray-400" on:click={() => window.print() }>Print Card</button>
+
 			<video class="mt-4 rounded-sm " width="320" height="240" autoplay={true} bind:this={videoRef}></video>
 			<canvas class="mt-4 rounded-sm bg-gray-200 screen:hidden print:hidden" width="320" height="240" bind:this="{canvasRef}"></canvas>
 	
 		</div>
 		<div>
-			<div class="grid grid-cols-5 border-2 border-gray-900 border-solid p-4 print:w-[85mm] print:h-[55mm]">
+			<div class="grid grid-cols-5 border-2 border-gray-900 border-solid screen:bg-gray-100 p-4 print:w-[85mm] print:h-[55mm]">
 				<div class="col-span-2">
 					<div class="avatar">
 						<div class="w-24 h-24 overflow-auto touch-auto rounded">
