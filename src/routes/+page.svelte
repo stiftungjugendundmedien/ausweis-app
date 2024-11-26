@@ -83,28 +83,43 @@ async function captureScreen() {
 }
 
 </script>
-<section class="container screen:bg-gray-300 mx-auto px-4 print:bg-none">
+<section class="container screen:bg-gray-300 mx-auto p-8 print:bg-none">
 <h1 class="text-6xl text-gray-800">Ausweis Generator</h1>
 </section>
-<section class="container bg-gray-200 mx-auto px-4">
+<section class="container screen:bg-gray-200 mx-auto px-4">
 	<div class="grid grid-cols-2 gap-4">
-	<div class="print:hidden">
-	<h1 class="text-4xl text-blue-500 my-4">WebCam</h1>
-	<button class="btn" on:click={startStream} >Start Webcam</button>
-	<button class="bg-red-500 text-white py-2 px-4 rounded-md" on:click={stopStream} >Stop Webcam</button>
-	<button class="bg-gray-400 text-black py-2 px-4 rounded-md" on:click={capturePhoto} id="captureButton">Capture Photo</button>
+		<div class="print:hidden">
+			<h1 class="text-4xl text-blue-500 my-4">WebCam</h1>
+			<button class="btn" on:click={startStream} >Start Webcam</button>
+			<button class="bg-red-500 text-white py-2 px-4 rounded-md" on:click={stopStream} >Stop Webcam</button>
+			<button class="bg-gray-400 text-black py-2 px-4 rounded-md" on:click={capturePhoto} id="captureButton">Capture Photo</button>
  
-	<video class="mt-4 rounded-sm " width="320" height="240" autoplay={true} bind:this={videoRef}></video>
-	<canvas class="mt-4 rounded-sm bg-gray-200 screen:hidden print:hidden" width="320" height="240" bind:this="{canvasRef}"></canvas>
+			<video class="mt-4 rounded-sm " width="320" height="240" autoplay={true} bind:this={videoRef}></video>
+			<canvas class="mt-4 rounded-sm bg-gray-200 screen:hidden print:hidden" width="320" height="240" bind:this="{canvasRef}"></canvas>
+	
+		</div>
+		<div>
+			<div class="grid grid-cols-5 border-2 border-gray-900 border-solid p-4 print:w-[85mm] print:h-[55mm]">
+				<div class="col-span-2">
+					<div class="avatar">
+						<div class="w-24 h-24 overflow-auto touch-auto rounded">
+							<img class="hidden" bind:this={avatarRef} src="https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.webp" />
+							<Icon src="{User}" theme="solid" class="bg-gray-200 color-gray-500"/>
+						</div>
+					</div>
+				</div>
 
-	</div>
-	<div>
-		<div class="avatar">
-			<div class="w-24 h-24 overflow-auto touch-auto rounded">
-				<img class="hidden" bind:this={avatarRef} src="https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.webp" />
-				<Icon src="{User}" theme="solid" class="bg-gray-200 color-gray-500"/>
+				<div class="col-span-3">
+					<dl class="screen:text-lg print:text-sm font-medium">
+						<dt>Name</dt>
+						<dd>Max Mustermann</dd>
+
+						<dt>Geburtstag</dt>
+						<dd>17.06.2015</dd>
+					</dl>
+
+				</div>
 			</div>
 		</div>
-	</div>
 	</div>
 </section>
