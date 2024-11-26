@@ -102,7 +102,11 @@ async function captureScreen() {
 			<button class="btn bg-primary" on:click={capturePhoto} id="captureButton">Capture Photo</button>
 			<button class="btn bg-gray-400" on:click={() => window.print() }>Print Card</button>
 
-			<video class="mt-4 rounded-sm " width="320" height="240" autoplay={true} bind:this={videoRef}></video>
+				<div class="relative mt-6 mb-6 h-[240px] w-[320px]">
+				<video class="rounded-sm absolute border-2 border-gray-300" width="320" height="240" autoplay={true} bind:this={videoRef}></video>
+				<div class="absolute blur-sm inset-y-0 left-0 w-16"></div>
+				<div class="absolute blur-sm inset-y-0 right-0 w-16"></div>
+			</div>
 			<canvas class="mt-4 rounded-sm bg-gray-200 screen:hidden print:hidden" width="400" height="400" bind:this="{canvasRef}"></canvas>
 	
 		</div>
