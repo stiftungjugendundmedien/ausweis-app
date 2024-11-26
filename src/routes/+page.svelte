@@ -58,7 +58,7 @@ async function capturePhoto() {
 
 	//context.drawImage(videoRef, 0, 0, canvasRef.width, canvasRef.height);
 
-	const size = videoRef.height;
+	const size = videoRef.videoHeight;
 	const sourceX = (videoRef.videoWidth - size) / 2;
 	const sourceY = (videoRef.videoHeight - size) / 2;
 	context.drawImage(videoRef, sourceX, sourceY, size, size, 0, 0, canvasRef.width, canvasRef.height);
@@ -103,7 +103,7 @@ async function captureScreen() {
 			<button class="btn bg-gray-400" on:click={() => window.print() }>Print Card</button>
 
 			<video class="mt-4 rounded-sm " width="320" height="240" autoplay={true} bind:this={videoRef}></video>
-			<canvas class="mt-4 rounded-sm bg-gray-200 screen:hidden print:hidden" width="200" height="200" bind:this="{canvasRef}"></canvas>
+			<canvas class="mt-4 rounded-sm bg-gray-200 screen:hidden print:hidden" width="400" height="400" bind:this="{canvasRef}"></canvas>
 	
 		</div>
 		<div>
