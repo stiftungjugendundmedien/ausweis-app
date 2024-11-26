@@ -5,10 +5,14 @@
 // https://developer.mozilla.org/en-US/docs/Web/API/Media_Capture_and_Streams_API/Taking_still_photos
 // https://medium.com/@mahesh.ks/capture-html5-container-as-image-and-email-in-ios-android-devices-b1d1b5b93fdc
 
+import { Icon } from '@steeze-ui/svelte-icon';
+import { User } from '@steeze-ui/heroicons';
 
-let stream: MediaStream | null = null;
+
+let videoStream: MediaStream | null = null;
 let videoRef;
 let canvasRef;
+let avatarRef;
 
 const constraints = {
 	audio: false,
@@ -18,13 +22,16 @@ const constraints = {
 	}
 };
 
-async function getStream() {
+async function startStream() {
+	console.log('Start Stream');
 		navigator.mediaDevices
 			.getUserMedia(constraints)
 			.then((mediaStream) => {
-				stream = mediaStream;
+				videoStream = mediaStream;
 				videoRef.srcObject = mediaStream;
-				videoRef.onloadedmetadata = () => {
+				videoStream.onloadedmetadata = () => {
+				console.log(videoStream);
+					//videoRef.srcObject = mediaStream;
 					videoRef.play();
 				}
 			})
@@ -34,13 +41,33 @@ async function getStream() {
 }
 
 async function stopStream() {
-	stream.getTracks().forEach(track => track.stop());
+	console.log('Stop Stream')
+	videoStream.getTracks().forEach(track => track.stop());
 	videoRef.srcObject = null;
-	//videoRef.stop();
+}
+
+async function capturePhoto() {
+	console.log('Capture Photo');
+	const context = canvasRef.getContext('2d');
+
+	console.log(context);
+	console.log(canvasRef.width);
+	console.log(videoRef.videoWidth);
+	//canvasRef.width = videoRef.videoWidth;
+	//canvasRef.height = videoRef.videoHeight;
+
+	context.drawImage(videoRef, 0, 0, canvasRef.width, canvasRef.height);
+
+	const dataUrl = canvasRef.toDataURL();
+	console.log(dataUrl);
+	console.log(avatarRef);
+	console.log(avatarRef.src);
+	avatarRef.src = dataUrl;
+	avatarRef.classList.remove('hidden');
 }
 
 async function captureScreen() {
-	const context = canvasRef.getContext('2d');
+/*	const context = canvasRef.getContext('2d');
 	let video;
 	  try {
     const captureStream = await navigator.mediaDevices.getDisplayMedia();
@@ -52,19 +79,32 @@ async function captureScreen() {
   } catch (err) {
     console.error("Error: " + err);
   }
+	*/
 }
 
 </script>
-
-<h1 class="">Webcam Capture</h1>
-
-<section class="container mx-auto px-4">
+<section class="container screen:bg-gray-300 mx-auto px-4 print:bg-none">
+<h1 class="text-6xl text-gray-800">Ausweis Generator</h1>
+</section>
+<section class="container bg-gray-200 mx-auto px-4">
+	<div class="grid grid-cols-2 gap-4">
+	<div class="print:hidden">
 	<h1 class="text-4xl text-blue-500 my-4">WebCam</h1>
-	<button class="bg-green-500 text-white py-2 px-4 rounded-md" on:click={getStream} >Start Webcam</button>
+	<button class="btn" on:click={startStream} >Start Webcam</button>
 	<button class="bg-red-500 text-white py-2 px-4 rounded-md" on:click={stopStream} >Stop Webcam</button>
-	<button class="bg-gray-400 text-black py-2 px-4 rounded-md" on:click={captureScreen} id="captureButton">Capture Photo</button>
+	<button class="bg-gray-400 text-black py-2 px-4 rounded-md" on:click={capturePhoto} id="captureButton">Capture Photo</button>
  
-	<video class="mt-4 rounded-sm " width="640" height="480" autoplay={true} bind:this={videoRef}></video>
+	<video class="mt-4 rounded-sm " width="320" height="240" autoplay={true} bind:this={videoRef}></video>
+	<canvas class="mt-4 rounded-sm bg-gray-200 screen:hidden print:hidden" width="320" height="240" bind:this="{canvasRef}"></canvas>
 
-	<canvas class="mt-4 rounded-sm bg-gray-200" bind:this="{canvasRef}"></canvas>
+	</div>
+	<div>
+		<div class="avatar">
+			<div class="w-24 h-24 overflow-auto touch-auto rounded">
+				<img class="hidden" bind:this={avatarRef} src="https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.webp" />
+				<Icon src="{User}" theme="solid" class="bg-gray-200 color-gray-500"/>
+			</div>
+		</div>
+	</div>
+	</div>
 </section>
