@@ -7,7 +7,7 @@
 		"build": "vite build",
 		"preview": "vite preview",
 		"lint": "eslint --fix --quiet src --ext .js,.svelte",
-		"format": "prettier --write '{public,src}/**/*.{css,html,js,svelte}'",
+		"format": "prettier --write '{public,src}/**/*.{css,html,js,ts,svelte}'",
 		"check": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json",
 		"check:watch": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json --watch"
 	},
@@ -24,6 +24,7 @@
 		"postcss": "^8.4.49",
 		"prettier": "^3.4.1",
 		"prettier-plugin-svelte": "^3.3.2",
+		"prettier-plugin-tailwindcss": "^0.6.9",
 		"svelte": "^5.0.0",
 		"svelte-check": "^4.0.0",
 		"tailwindcss": "^3.4.15",

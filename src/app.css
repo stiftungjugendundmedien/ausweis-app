@@ -3,8 +3,8 @@
 @import 'tailwindcss/utilities';
 
 @layer components {
-  .card {
-    width: 85mm;
-    height: 55mm;
-  }
+	.business-card {
+		width: 85mm;
+		height: 55mm;
+	}
 }
