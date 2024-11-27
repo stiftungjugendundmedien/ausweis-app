@@ -1,4 +1,12 @@
-# sv
+# Ausweis App
+
+Take a photo with your tablet and create a document with your name and photo.
+Print it on magic-paper and you have entry to every place.
+
+Example: [`Ausweis App`](https://cabi.github.io/ausweis-app/)
+
+The site is created with github-pages.
+
 
 ## Technical Requirements
 
@@ -52,7 +60,7 @@ You can preview the production build with `npm run preview`.
 
 > To deploy your app, you may need to install an [adapter](https://svelte.dev/docs/kit/adapters) for your target environment.
 
-## interesting things to read 
+## interesting things to read
 - https://www.geeksforgeeks.org/how-to-change-tabs-horizontally-on-hover-with-tailwind-css-and-javascript/?ref=header_outind
 - https://www.geeksforgeeks.org/how-to-make-div-fill-full-height-of-parent-in-tailwind-css/
 - https://www.material-tailwind.com/docs/html/installation
