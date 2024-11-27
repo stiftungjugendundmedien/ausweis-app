@@ -130,10 +130,10 @@
 	</section>
 
 	<!-- BUSINESS CARD -->
-	<section class="m-2 h-48 w-3/4 grow px-4 py-2 screen:bg-primary">
+	<section class="m-2 h-48 w-3/4 grow px-4 py-2 screen:bg-gray-300">
 		<div class="flex h-full min-h-full items-center justify-center">
 			<div
-				class="grid grid-cols-5 border-2 border-solid border-gray-900 p-4 screen:bg-gray-100 print:h-[55mm] print:w-[85mm]"
+				class="grid grid-cols-5 border-2 border-solid border-gray-900 p-4 screen:bg-primary print:h-[55mm] print:w-[85mm] print:bg-primary"
 			>
 				<div class="col-span-2">
 					<div class="avatar">
@@ -151,11 +151,23 @@
 
 				<div class="col-span-3">
 					<dl class="font-medium screen:text-lg print:text-sm">
-						<dt>Name</dt>
-						<dd>Max Mustermann</dd>
+						<dt class=" pl-2 font-semibold text-white">NAME</dt>
+						<dd>
+							<input
+								type="text"
+								class="block w-full rounded-xl border-gray-300 px-1 shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50"
+								placeholder="Dein Name"
+							/>
+						</dd>
 
-						<dt>Geburtstag</dt>
-						<dd>17.06.2015</dd>
+						<dt class="mt-2 pl-2 font-semibold text-white">BESONDERE FÄHIGKEIT</dt>
+						<dd>
+							<input
+								type="text"
+								class="block w-full rounded-xl border-gray-300 px-1 shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50"
+								placeholder="Schnüffelnase"
+							/>
+						</dd>
 					</dl>
 				</div>
 			</div>
