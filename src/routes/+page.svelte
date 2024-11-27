@@ -80,7 +80,7 @@
 	}
 </script>
 
-<div class="bg-w flex h-screen min-h-screen flex-col items-center justify-center pb-4">
+<div class="bg-w flex h-dvh min-h-screen flex-col items-center justify-center pb-4">
 	<!-- HEADLINE -->
 	<section class="mt-6 w-11/12 flex-none px-4 py-4 screen:bg-white print:hidden print:bg-none">
 		<div class="flex items-center justify-center">
