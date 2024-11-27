@@ -101,7 +101,7 @@
 	}
 </script>
 
-<div class="flex h-screen min-h-screen flex-col items-center justify-center gap-2 pb-4 bg-white">
+<div class="flex h-screen min-h-screen flex-col items-center justify-center gap-2 pb-4 bg-w">
 	<!-- HEADLINE -->
 	<section class="m-2 min-w-full flex-none px-4 py-2 screen:bg-gray-300 print:hidden print:bg-none">
 		<div class="flex items-center justify-center">
@@ -110,7 +110,7 @@
 	</section>
 
 	<!-- WEBCAM -->
-	<section class="m-2 h-48 w-3/4 grow bg-secondary px-4 py-2 print:hidden">
+	<section class="m-2 h-52 w-3/4 grow bg-secondary px-4 py-2 print:hidden">
 		<div class="flex h-full min-h-full items-center justify-center">
 			<div class="relative mb-6 mt-6 h-[240px] w-[240px] overflow-hidden border-2 border-red-300">
 				<!-- svelte-ignore a11y_media_has_caption -->
@@ -130,7 +130,7 @@
 	</section>
 
 	<!-- BUSINESS CARD -->
-	<section class="m-2 h-36 w-3/4 grow px-4 py-2 screen:bg-primary">
+	<section class="m-2 h-48 w-3/4 grow px-4 py-2 screen:bg-primary">
 		<div class="flex h-full min-h-full items-center justify-center">
 			<div
 				class="grid grid-cols-5 border-2 border-solid border-gray-900 p-4 screen:bg-gray-100 print:h-[55mm] print:w-[85mm]"
