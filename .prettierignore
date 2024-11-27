@@ -1,0 +1,12 @@
+
+packages/**/dist/*.js
+packages/**/build/*.js
+packages/**/npm/**/*
+packages/**/config/*.js
+
+**/node_modules
+**/.svelte-kit
+**/.vercel
+.github/CODEOWNERS
+.prettierignore
+.changeset
