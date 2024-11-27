@@ -1,18 +1,33 @@
 # sv
 
-Everything you need to build a Svelte project, powered by [`sv`](https://github.com/sveltejs/cli).
+## Technical Requirements
 
-## Creating a project
+- Node.js 20.x
+- npm 10.x
+- Github
 
-If you're seeing this, you've probably already done this step. Congrats!
+## Packages used
+- SveltKit
+- TailwindCSS
+- DaisyUI
+
+## Install
+
+Clone the repository
 
 ```bash
-# create a new project in the current directory
-npx sv create
-
-# create a new project in my-app
-npx sv create my-app
+git clone <repository>
 ```
+
+Install the packages.
+
+```bash
+npm install
+```
+
+
+Everything you need to build a Svelte project, powered by [`sv`](https://github.com/sveltejs/cli).
+
 
 ## Developing
 
@@ -36,3 +51,11 @@ npm run build
 You can preview the production build with `npm run preview`.
 
 > To deploy your app, you may need to install an [adapter](https://svelte.dev/docs/kit/adapters) for your target environment.
+
+## interesting things to read 
+- https://www.geeksforgeeks.org/how-to-change-tabs-horizontally-on-hover-with-tailwind-css-and-javascript/?ref=header_outind
+- https://www.geeksforgeeks.org/how-to-make-div-fill-full-height-of-parent-in-tailwind-css/
+- https://www.material-tailwind.com/docs/html/installation
+- https://developer.mozilla.org/en-US/docs/Web/API/Media_Capture_and_Streams_API/Taking_still_photos
+- https://medium.com/@mahesh.ks/capture-html5-container-as-image-and-email-in-ios-android-devices-b1d1b5b93fdc
+- https://developer.mozilla.org/en-US/docs/Web/API/MediaDevices/getUserMedia
