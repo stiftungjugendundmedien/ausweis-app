@@ -137,7 +137,7 @@
 			>
 				<div class="col-span-2">
 					<div class="avatar">
-						<div class="h-24 w-24 touch-auto overflow-auto rounded">
+						<div class="h-24 w-24 touch-auto overflow-auto rounded-full">
 							<img
 								class="hidden"
 								bind:this={avatarRef}
