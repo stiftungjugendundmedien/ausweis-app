@@ -155,7 +155,7 @@
 						<dd>
 							<input
 								type="text"
-								class="block w-full rounded-xl border-gray-300 px-1 shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50"
+								class="block w-full rounded-xl border-gray-300 px-2 shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50"
 								placeholder="Dein Name"
 							/>
 						</dd>
@@ -164,7 +164,7 @@
 						<dd>
 							<input
 								type="text"
-								class="block w-full rounded-xl border-gray-300 px-1 shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50"
+								class="block w-full rounded-xl border-gray-300 px-2 shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50"
 								placeholder="Schnüffelnase"
 							/>
 						</dd>
