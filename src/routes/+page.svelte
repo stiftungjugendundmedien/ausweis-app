@@ -133,11 +133,18 @@
 	<section class="m-2 h-48 w-3/4 grow px-4 py-2 screen:bg-gray-300">
 		<div class="flex h-full min-h-full items-center justify-center">
 			<div
-				class="grid grid-cols-5 border-2 border-solid border-gray-900 p-4 screen:bg-primary print:h-[55mm] print:w-[85mm] print:bg-primary"
+				class="grid grid-cols-1 border-2 border-solid border-gray-900 p-4 bg-primary print:h-[105mm] print:w-[74mm]"
 			>
-				<div class="col-span-2">
-					<div class="avatar">
-						<div class="h-24 w-24 touch-auto overflow-auto rounded-full">
+				<div class="col">
+					<div class="flex items-center justify-center gap-2">
+					<h2 class="text-4xl text-white">AUSWEIS</h2>
+				</div>
+				</div>
+				<div class="col">
+					<div class="flex items-center justify-center gap-2">
+					
+					<div class="mt-4 avatar">
+						<div class="screen:h-24 screen:w-24 print:h-[35mm] print:w-[35mm] touch-auto overflow-auto rounded-xl">
 							<img
 								class="hidden"
 								bind:this={avatarRef}
@@ -148,8 +155,9 @@
 						</div>
 					</div>
 				</div>
+				</div>
 
-				<div class="col-span-3">
+				<div class="col">
 					<dl class="font-medium screen:text-lg print:text-sm">
 						<dt class=" pl-2 font-semibold text-white">NAME</dt>
 						<dd>
