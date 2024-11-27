@@ -101,7 +101,7 @@
 	}
 </script>
 
-<div class="flex h-screen min-h-screen flex-col items-center justify-center gap-2 pb-4 bg-w">
+<div class="bg-w flex h-screen min-h-screen flex-col items-center justify-center gap-2 pb-4">
 	<!-- HEADLINE -->
 	<section class="m-2 min-w-full flex-none px-4 py-2 screen:bg-gray-300 print:hidden print:bg-none">
 		<div class="flex items-center justify-center">
@@ -112,7 +112,7 @@
 	<!-- WEBCAM -->
 	<section class="m-2 h-52 w-3/4 grow bg-secondary px-4 py-2 print:hidden">
 		<div class="flex h-full min-h-full items-center justify-center">
-			<div class="relative mb-6 mt-6 h-[240px] w-[240px] overflow-hidden border-2 border-red-300">
+			<div class="relative mb-6 mt-6 h-[200px] w-[200px] overflow-hidden border-2 border-red-300">
 				<!-- svelte-ignore a11y_media_has_caption -->
 				<video
 					class="absolute left-1/2 h-full min-h-full min-w-full max-w-none -translate-x-1/2 rounded-sm border-2 border-gray-300 object-center"
