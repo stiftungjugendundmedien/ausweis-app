@@ -101,23 +101,25 @@
 	}
 </script>
 
-<div class="flex h-full min-h-screen flex-col items-center justify-center gap-4">
+<div class="flex h-screen min-h-screen flex-col items-center justify-center gap-2 pb-4">
 	<!-- HEADLINE -->
-	<section class="m-2 min-w-full flex-none px-4 py-2 screen:bg-gray-300 print:bg-none">
+	<section class="m-2 min-w-full flex-none px-4 py-2 screen:bg-gray-300 print:hidden print:bg-none">
 		<div class="flex items-center justify-center">
 			<h1 class="text-6xl text-gray-800">Ausweis Generator</h1>
 		</div>
 	</section>
 
 	<!-- WEBCAM -->
-	<section class="m-2 grow bg-primary px-4 py-2 print:hidden">
-		<div class="relative mb-6 mt-6 h-[240px] w-[240px] overflow-hidden border-2 border-red-300">
-			<!-- svelte-ignore a11y_media_has_caption -->
-			<video
-				class="absolute left-1/2 h-full min-h-full min-w-full max-w-none -translate-x-1/2 rounded-sm border-2 border-gray-300 object-center"
-				autoplay={true}
-				bind:this={videoRef}
-			></video>
+	<section class="m-2 h-48 w-3/4 grow bg-secondary px-4 py-2 print:hidden">
+		<div class="flex h-full min-h-full items-center justify-center">
+			<div class="relative mb-6 mt-6 h-[240px] w-[240px] overflow-hidden border-2 border-red-300">
+				<!-- svelte-ignore a11y_media_has_caption -->
+				<video
+					class="absolute left-1/2 h-full min-h-full min-w-full max-w-none -translate-x-1/2 rounded-sm border-2 border-gray-300 object-center"
+					autoplay={true}
+					bind:this={videoRef}
+				></video>
+			</div>
 		</div>
 		<canvas
 			class="mt-4 rounded-sm bg-gray-200 screen:hidden print:hidden"
@@ -128,8 +130,8 @@
 	</section>
 
 	<!-- BUSINESS CARD -->
-	<section class="m-2 h-48 grow px-4 py-2 screen:bg-secondary">
-		<div class="flex h-full min-h-full items-center">
+	<section class="m-2 h-48 w-3/4 grow px-4 py-2 screen:bg-primary">
+		<div class="flex h-full min-h-full items-center justify-center">
 			<div
 				class="grid grid-cols-5 border-2 border-solid border-gray-900 p-4 screen:bg-gray-100 print:h-[55mm] print:w-[85mm]"
 			>
