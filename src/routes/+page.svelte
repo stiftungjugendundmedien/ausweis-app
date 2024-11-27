@@ -89,7 +89,7 @@
 	</section>
 
 	<!-- CONTENT -->
-	<section class="h-screen min-h-fit w-11/12 grow bg-white p-4">
+	<section class="h-full min-h-fit w-11/12 grow bg-white p-4">
 		<div class="flex h-full flex-row items-center justify-center">
 			<!-- WEBCAM -->
 			<section class="m-2 h-full w-3/4 basis-1/2 px-4 py-2 print:hidden">
