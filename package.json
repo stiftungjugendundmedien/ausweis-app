@@ -1,7 +1,13 @@
 {
 	"name": "ausweis-app",
-	"version": "0.0.1",
+	"version": "0.0.3",
 	"type": "module",
+  "homepage": "https://github.com/cabi/ausweis-app",
+  "licence": "Apache 2.0",
+  "author": {
+    "name": "Carsten Biebricher",
+    "url": "https://github.com/cabi"
+  },
 	"scripts": {
 		"dev": "vite dev",
 		"build": "vite build",
