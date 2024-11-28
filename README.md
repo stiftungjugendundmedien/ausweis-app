@@ -97,7 +97,7 @@ The app has the deployment workflow configured in the file `.github/workflows/de
 
 After each push in the main-branch of the repository the deployment will be started.
 
-It uses `github-pages` as a deployment target after building.
+It uses [`github-pages`](https://pages.github.com/) as a deployment target after building.
 
 After the deployment you can find the builded app under.
 
