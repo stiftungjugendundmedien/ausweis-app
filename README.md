@@ -36,9 +36,9 @@ Pushing the `Ausweis drucken` Button open the Browser printing-dialog. You see o
 - Github
 
 ## Packages used
-- SveltKit 2.x
-- TailwindCSS 3.x
-- DaisyUI 4.x
+- [`SveltKit`](https://sveltekit.io/) 2.x
+- [`TailwindCSS`](https://tailwindcss.com/) 3.x
+- [`DaisyUI`](https://daisyui.com/) 4.x
 
 ## Install
 
