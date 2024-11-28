@@ -7,6 +7,13 @@ Example: [`Ausweis App`](https://cabi.github.io/ausweis-app/)
 
 The site is created with github-pages.
 
+<div align="center">
+
+| <img src=".repo/images/ausweis-app.png" width="500px"/> |
+| ------------------------------------------------ |
+
+</div>
+
 ## Usage
 
 Open the url of the ausweis-app with your tablet.
