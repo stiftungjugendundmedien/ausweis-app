@@ -88,7 +88,7 @@
 	 *
 	 * stop the video stream.
 	 */
-	 async function stopStream() {
+	async function stopStream() {
 		console.log('Stop Stream');
 		if (videoStream) {
 			videoStream.getTracks().forEach((track) => track.stop());
@@ -199,10 +199,8 @@
 		<div class="screen:flex h-full print:h-auto flex-row items-center justify-start">
 
 			<!-- BUSINESS CARDS -->
-			<!-- {#each cardGroups as group (group[0]?.id)} -->
-			<!-- Group Container with Page Break -->
 			<div class={showCardDetails ? "screen:flex print:grid print:grid-cols-2" : "screen:flex print:grid print:grid-cols-4 print:gap-20"}>
-				{#each cards as card (card.id)} <!-- {#each group as card (card.id)} -->
+				{#each cards as card (card.id)}
 					<section class="m-2 h-full basis-1/2 px-4 py-2">
 						<div class="screen:flex h-full min-h-full items-center justify-center">
 							<div
@@ -280,11 +278,6 @@
 	<!-- BUTTON -->
 	<section class="mb-4 w-11/12 flex-none bg-white p-4 print:hidden">
 		<div class="flex items-center justify-center gap-2">
-			<!--
-			<button class="btn bg-green-500" on:click={startStream}
-				><Icon src={VideoCamera} theme="mini" class="size-6" /> Start Webcam</button
-			>
-			-->
 			<button class="{showCardDetails ? "btn bg-rot hover:bg-rot-dark text-white" : "btn bg-gruen hover:bg-gruen-dark text-white"}" on:click={toggleCardDetails}
 				><Icon src={showCardDetails ? EyeSlash : Eye} theme="mini" class="size-6" />{showCardDetails ? "Details verbergen" : "Details zeigen"}</button
 			>
