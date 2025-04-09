@@ -205,7 +205,7 @@
 						<div class="screen:flex h-full min-h-full items-center justify-center">
 							<div
 								class={showCardDetails ? "relative grid grid-cols-1 bg-gelb p-4 screen:h-96 aspect-[74/105] print:h-[105mm] print:w-[74mm] print:grid": "relative"}
-								style={showCardDetails ? "background-image: url('/resources/A7-Rallyeausweis.svg'); background-size: cover; background-position: center; -webkit-print-color-adjust: exact; print-color-adjust: exact;" : ""}
+								style={showCardDetails ? "background-image: url('resources/A7-Rallyeausweis.svg'); background-size: cover; background-position: center; -webkit-print-color-adjust: exact; print-color-adjust: exact;" : ""}
 							>
 
 								<!-- REMOVE CARD BUTTON -->
