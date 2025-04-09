@@ -11,6 +11,31 @@ export default {
         print: { raw: "print" },
         screen: { raw: "screen" },
       },
+			colors: {
+				gelb: {
+					DEFAULT: "#ffc900", // Original primary color
+					dark: "#ebba00", // Darker primary color
+					light: "#ffda4e", // Lighter primary color
+				},
+				gruen: {
+					DEFAULT: "#79b530", // Original primary color
+					dark: "#649628", // Darker primary color
+					light: "#8dcc40", // Lighter primary color
+				},
+				rot: {
+					DEFAULT: "#ff0000", // Original primary color
+					dark: "#d80000", // Darker primary color
+					light: "#ff4e4e", // Lighter primary color
+				},
+				grau: {
+					DEFAULT: "#666666", // Original primary color
+					dark: "#525252", // Darker primary color
+					light: "#ededed", // Lighter primary color
+				},
+			},
+			fontFamily: {
+        sk: ['"Source Sans 3"', '"Roboto"', '"sans-serif"'],
+      },
     },
   },
 
