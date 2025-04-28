@@ -195,7 +195,7 @@
 	</section>
 
 	<!-- CONTENT -->
-	<section class="h-full max-w-full screen:overflow-x-auto min-h-fit w-11/12 grow bg-grau-light print:bg-none p-4 justify-center">
+	<section class="h-full max-w-full screen:overflow-x-auto min-h-fit w-11/12 grow bg-grau-light print:bg-white p-4 justify-center">
 		<div class="screen:flex h-full print:h-auto flex-row items-center justify-start">
 
 			<!-- BUSINESS CARDS -->
