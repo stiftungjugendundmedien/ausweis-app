@@ -35,7 +35,7 @@
     cards = cards.filter(card => card.id !== id);
   }
 
-	let showCardDetails = true; // State to toggle card details visibility
+	let showCardDetails = false; // State to toggle card details visibility
 
 	/**
 	 * toggleCardDetails
@@ -154,7 +154,7 @@
   }
 </script>
 
-<div class="bg-white flex h-dvh min-h-screen flex-col items-center justify-center pb-4">
+<div class="bg-white flex h-dvh flex-col items-center justify-center pb-4">
 	<!-- HEADLINE -->
 	<section class="mt-6 w-11/12 flex-none px-4 py-4 screen:bg-grau-light print:hidden print:bg-none">
 		<div class="flex items-center justify-center">
@@ -163,7 +163,7 @@
 	</section>
 
 	<!-- OVERLAY -->
-	<section class="hidden fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-50" bind:this={overlayRef} >
+	<section class="hidden fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-50" bind:this={overlayRef}>
 		<div class="bg-white p-6 rounded-lg shadow-lg">
 			<h2 class="text-xl font-bold font-sk">Kamera</h2>
 			<div class="flex h-full min-h-full items-center justify-center">
@@ -195,11 +195,13 @@
 	</section>
 
 	<!-- CONTENT -->
-	<section class="h-full max-w-full screen:overflow-x-auto min-h-fit w-11/12 grow bg-grau-light p-4 justify-center">
+	<section class="h-full max-w-full screen:overflow-x-auto min-h-fit w-11/12 grow bg-grau-light p-4 justify-center print:bg-white">
 		<div class="screen:flex h-full print:h-auto flex-row items-center justify-start">
 
 			<!-- BUSINESS CARDS -->
-			<div class={showCardDetails ? "screen:flex print:grid print:grid-cols-2" : "screen:flex print:grid print:grid-cols-4 print:gap-20"}>
+			<!-- {#each Array(Math.ceil(cards.length / 4)).fill().map((_, i) => cards.slice(i * 4, i * 4 + 4)) as cardGroup} -->
+			<div class={showCardDetails ? "screen:flex print:grid print:grid-cols-2 print:w-full print:h-full" : "screen:flex print:grid print:grid-cols-4 print:gap-20 print:w-full print:h-full"}>
+				<!-- {#each cardGroup as card (card.id)} -->
 				{#each cards as card (card.id)}
 					<section class="m-2 h-full basis-1/2 px-4 py-2">
 						<div class="screen:flex h-full min-h-full items-center justify-center">
@@ -210,14 +212,14 @@
 
 								<!-- REMOVE CARD BUTTON -->
 								<button
-									class={showCardDetails ? "absolute -top-2 -right-2 bg-red-500 rounded-full w-6 h-6 flex items-center justify-center shadow-md hover:bg-red-600 print:hidden" : "absolute top-11 -right-5 bg-red-500 rounded-full w-6 h-6 flex items-center justify-center shadow-md hover:bg-red-600 print:hidden"}
+									class={showCardDetails ? "absolute -top-2 -right-2 bg-red-500 rounded-full w-6 h-6 flex items-center justify-center shadow-md hover:bg-red-600 print:hidden" : "absolute -top-5 -right-5 bg-red-500 rounded-full w-6 h-6 flex items-center justify-center shadow-md hover:bg-red-600 print:hidden"}
 									on:click={() => removeCard(card.id)}
 								>
 									<Icon src={Minus} theme="mini" class="text-white size-4" />
 								</button>
 
 								<div class="col">
-									<div class="mt-16 flex items-center justify-center gap-1">
+									<div class={showCardDetails ? "mt-16 flex items-center justify-center gap-1":"flex items-center justify-center gap-1"}>
 										<div class="avatar">
 											<div
 												class="touch-auto overflow-auto rounded-xl screen:h-36 screen:w-36 print:h-[40mm] print:w-[40mm] cursor-pointer"
@@ -265,7 +267,8 @@
 					</section>
 				{/each}
 			</div>
-			<section class="m-2 h-full w-3/4 basis-1/2 px-4 py-2">
+			<!--{/each}-->
+			<section class="m-2 h-full w-3/4 basis-1/2 px-4 py-2 print:hidden">
 				<div class="flex h-full min-h-full items-center justify-center">
 					<button on:click={addCard}
 						class="grid grid-cols-1 bg-gelb p-4 w-24 h-24 print:hidden">
