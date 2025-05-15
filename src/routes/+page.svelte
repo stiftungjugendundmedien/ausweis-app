@@ -282,10 +282,10 @@
 	<section class="mb-4 w-11/12 flex-none bg-white p-4 print:hidden">
 		<div class="flex items-center justify-center gap-2">
 			<button class="{showCardDetails ? "btn bg-rot hover:bg-rot-dark text-white" : "btn bg-gruen hover:bg-gruen-dark text-white"}" on:click={toggleCardDetails}
-				><Icon src={showCardDetails ? EyeSlash : Eye} theme="mini" class="size-6" />{showCardDetails ? "Details verbergen" : "Details zeigen"}</button
+				><Icon src={showCardDetails ? EyeSlash : Eye} theme="mini" class="size-6" />{showCardDetails ? "Ausweis verbergen" : "Ausweis zeigen"}</button
 			>
 			<button class="btn bg-grau hover:bg-grau-dark text-white" on:click={() => window.print()}
-				><Icon src={Printer} theme="mini" class="size-6" />Ausweise drucken</button
+				><Icon src={Printer} theme="mini" class="size-6" />Drucken</button
 			>
 		</div>
 	</section>
